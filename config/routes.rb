@@ -1,4 +1,14 @@
 JRE::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/services"
+
+  get "static_pages/projects"
+
+  get "static_pages/profile"
+
+  get "static_pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
