@@ -9,7 +9,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'devise'
 gem 'figaro'
-gem 'pg'
+gem 'gmaps4rails'
 
 
 # Gems used only for assets and not required

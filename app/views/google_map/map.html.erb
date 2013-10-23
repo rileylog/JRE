@@ -1,0 +1,23 @@
+<!-- create html + load js files but don't create map itself: will be done after ajax call -->
+<%= gmaps({:last_map => false}) %>
+ 
+<!--  button to trigger ajax call -->
+<button type="button" id="ajax">Load Map</button>
+ 
+<script type="text/javascript" charset="utf-8">
+$(function() {
+ 
+//hide the empty container
+$(".map_container").hide();
+ 
+$("#ajax").click(function(){
+ 
+  $.getJSON('/users', function(json){
+    $(".map_container").show();
+    Gmaps.loadMaps();
+    Gmaps.map.addMarkers(json);
+  })
+  })
+ 
+});
+</script>

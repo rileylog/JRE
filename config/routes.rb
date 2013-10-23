@@ -1,13 +1,18 @@
 JRE::Application.routes.draw do
-  get "static_pages/home"
+  
+  get "google_map/map"
 
-  get "static_pages/services"
+  root :to => 'static_pages#home'
 
-  get "static_pages/projects"
+  get "services", to: "static_pages#services", as: :services
 
-  get "static_pages/profile"
+  get "projects", to: "static_pages#projects", as: :projects
 
-  get "static_pages/contact"
+  get "profile", to: "static_pages#profile", as: :profile
+
+  get "contact", to: "static_pages#contact", as: :contact
+
+  get "map", to: "google_map#map", as: :map
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
